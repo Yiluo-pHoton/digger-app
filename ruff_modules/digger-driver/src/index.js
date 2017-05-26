@@ -60,7 +60,7 @@ module.exports = driver({
             this._leftForward.write(Level.low);
             this._rightForward.write(Level.high);
          
-            this._leftBack.write(Level.low);
+            this._leftBack.write(Level.high);
             this._rightBack.setDuty(0, function(){});
 
             invokeCallbackAsync(callback, undefined);
@@ -71,7 +71,7 @@ module.exports = driver({
             this._rightForward.write(Level.low);
          
             this._leftBack.write(Level.low);
-            this._rightBack.setDuty(0, function(){});
+            this._rightBack.setDuty(1, function(){});
 
             invokeCallbackAsync(callback, undefined);
         },
